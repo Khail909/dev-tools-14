@@ -112,8 +112,7 @@ def gameLoop():
         scores(snake_len - 1)
         pygame.draw.rect(dis, YELLOW, [x, y, snake, snake])
         pygame.display.update()
-        
-        if x == foodx and y == foody:
+        if (-10 <= x - foodx <= 10)  and (-10 <= y - foody <= 10):
             snake_len+=1
             foodx = round(random.randrange(0, 1080 - snake) / 10.0) * 10.0
             foodx = round(random.randrange(0, 720 - snake) / 10.0) * 10.0
